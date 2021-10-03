@@ -83,6 +83,9 @@
 
 % Theorem environment
 \RequirePackage{amsmath, amsthm, amssymb, tikz-cd}
+% This package must be loaded AFTER amsmath
+% see https://tex.stackexchange.com/questions/19104/cleveref-with-counters-with-same-name
+\RequirePackage[nameinlink]{cleveref}
 
 \newenvironment{soln}[1][Solution]{\begin{proof}[#1]\renewcommand{\qedsymbol}{}}{\end{proof}}
 \newenvironment{subproof}[1][Proof]{\begin{proof}[#1]\renewcommand{\qedsymbol}{$\blacksquare$}}{\end{proof}}
@@ -107,3 +110,22 @@
 \newtheorem{exmp}[mathcounter]{Example}
 \newtheorem{prob}{Problem}
 \newtheorem{rem}[mathcounter]{Remark}
+
+\crefname{subsection}{subsec}{subsecs}
+\Crefname{subsection}{Subsection}{Subsections}
+\crefname{thm}{thm}{thms}
+\Crefname{thm}{Theorem}{Theorems}
+\crefname{lem}{lem}{lems}
+\Crefname{lem}{Lemma}{Lemmas}
+\crefname{cor}{cor}{cors}
+\Crefname{cor}{Corollary}{Corollaries}
+\crefname{prop}{prop}{props}
+\Crefname{prop}{Proposition}{Propositions}
+\crefname{defin}{defin}{defins}
+\Crefname{defin}{Definition}{Definitions}
+\crefname{exmp}{exmp}{exmps}
+\Crefname{exmp}{Example}{Examples}
+\crefname{prob}{prob}{probs}
+\Crefname{prob}{Problem}{Problems}
+\crefname{rem}{rem}{rems}
+\Crefname{rem}{Remark}{Remarks}
