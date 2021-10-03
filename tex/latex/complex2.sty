@@ -129,3 +129,40 @@
 \Crefname{prob}{Problem}{Problems}
 \crefname{rem}{rem}{rems}
 \Crefname{rem}{Remark}{Remarks}
+
+% User-defined macros
+% olympiad geometry arc
+\RequirePackage{yhmath}
+\newcommand*{\arc}[1]{\wideparen{#1}}
+% math delimiter
+\RequirePackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+% common notation
+\newcommand*{\CC}{\mathbb C}
+\newcommand*{\FF}{\mathbb F}
+\newcommand*{\NN}{\mathbb N}
+\newcommand*{\QQ}{\mathbb Q}
+\newcommand*{\RR}{\mathbb R}
+\newcommand*{\ZZ}{\mathbb Z}
+\DeclareMathOperator{\id}{id}
+\newcommand*{\divides}{\mid}
+\newcommand*{\ndivides}{\nmid}
+
+% field, galois theory
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\Adj}{Adj}
+\DeclareMathOperator{\fnorm}{N} % field norm
+
+% mathfrak primes, useful in number theory
+\newcommand*{\ka}{\mathfrak{a}}
+\newcommand*{\kb}{\mathfrak{b}}
+\newcommand*{\kp}{\mathfrak{p}}
+\newcommand*{\km}{\mathfrak{m}}
+\newcommand*{\kq}{\mathfrak{q}}
+\DeclareMathOperator{\Spec}{Spec}
