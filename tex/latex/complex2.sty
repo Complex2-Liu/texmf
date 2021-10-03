@@ -1,5 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{complex2}[2021/12/25]
+\def\true{true}
+\def\false{false}
 
 % Package options
 \DeclareOption{draft}{
@@ -78,3 +80,30 @@
   urlcolor = {fav-blue},
   filecolor = {fav-magenta},
 }
+
+% Theorem environment
+\RequirePackage{amsmath, amsthm, amssymb, tikz-cd}
+
+\newenvironment{soln}[1][Solution]{\begin{proof}[#1]\renewcommand{\qedsymbol}{}}{\end{proof}}
+\newenvironment{subproof}[1][Proof]{\begin{proof}[#1]\renewcommand{\qedsymbol}{$\blacksquare$}}{\end{proof}}
+\newenvironment{claim}[1][Claim]{\par\medskip\textbf{#1.}\space}{\par}
+
+\ifx\opdraft\true
+\newcounter{mathcounter}
+\else
+\newcounter{mathcounter}[section]
+\numberwithin{mathcounter}{section}
+\numberwithin{equation}{section}
+\fi
+
+\newtheorem{thm}[mathcounter]{Theorem}
+\newtheorem{cor}[mathcounter]{Corollary}
+\newtheorem{lem}[mathcounter]{Lemma}
+\newtheorem{prop}[mathcounter]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{defin}[mathcounter]{Definition}
+\newtheorem*{notation}{notation}
+\newtheorem{exmp}[mathcounter]{Example}
+\newtheorem{prob}{Problem}
+\newtheorem{rem}[mathcounter]{Remark}
