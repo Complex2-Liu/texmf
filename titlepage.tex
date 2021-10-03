@@ -1,0 +1,34 @@
+\begin{titlepage}
+% define titlepage pagenumber (pdf metadata) to "C1"
+\renewcommand{\thepage}{C1}
+\begin{center}
+
+% title
+{\color{fav-red}\rule{\textwidth}{1pt}\par\medskip}
+{\huge\bfseries\sffamily \doctitle \par\medskip}
+{\color{fav-red}\rule{\textwidth}{1pt}\par\medskip}
+
+% authors and emails
+\vspace{1cm}
+{\Large\sffamily \scshape \docauthor \par}
+{\url{\docemail} \par}
+
+% titlepage logo
+\vspace{1cm}
+{\includegraphics{~/texmf/yinyang.pdf}\par}
+
+% date and motto
+\vfill
+{\docdate \par}
+{\color{fav-purple}\large\itshape \docmotto \par}
+
+\end{center}
+\end{titlepage}
+
+% table of contents
+\ifx \doctoc \true
+\pagenumbering{roman}
+{\sffamily\tableofcontents}
+\clearpage
+\pagenumbering{arabic}
+\fi
