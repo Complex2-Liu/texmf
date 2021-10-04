@@ -81,6 +81,24 @@
   filecolor = {fav-magenta},
 }
 
+% Header and footer
+\RequirePackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\docauthor}
+
+% define (fancy) plain style
+% use `\thispagestyle{plain}` when you want to remove everything (e.g. header line)
+% commonly used for title page or chapters, etc
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhf[FC]{\thepage} % always show pagenumber
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
 % Theorem environment
 \RequirePackage{amsmath, amsthm, amssymb, tikz-cd}
 % This package must be loaded AFTER amsmath
