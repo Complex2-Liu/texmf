@@ -101,6 +101,25 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
+% sections and subsection style
+\RequirePackage{titlesec}
+\titleformat
+{\section}
+[hang]
+{\bfseries\Large\sffamily}
+{\textcolor{fav-alt-purple}{\S \thesection}}
+{0.5em}
+{}
+[]
+\titleformat
+{\subsection}
+[hang]
+{\bfseries\large\sffamily}
+{\textcolor{fav-alt-blue}{\S \thesubsection}}
+{0.5em}
+{}
+[]
+
 % Theorem environment
 \RequirePackage{amsmath, amsthm, amssymb, tikz-cd}
 % This package must be loaded AFTER amsmath
