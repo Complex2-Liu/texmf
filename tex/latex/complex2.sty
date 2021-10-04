@@ -5,7 +5,7 @@
 
 % Package options
 \DeclareOption{draft}{
-  \def\opdraft\true
+  \def\opdraft{true}
 }
 
 \ProcessOptions\relax
@@ -38,7 +38,7 @@
 % Basic
 \RequirePackage{graphicx}
 % disable identation
-\set{\parindent}{0pt}
+\setlength{\parindent}{0pt}
 \linespread{1.25}
 \usepackage[margin = 1in, a4paper, includeheadfoot]{geometry}
 
@@ -55,7 +55,7 @@
   BoldFont = NotoSansSC-Medium.otf ,
   ItalicFont = ../ZhongYi/Kaiti.ttf ,
 ]
-\setCJKmonofont{PingFang.ttf}[
+\setCJKmonofont{PingFang.ttc}[
   Path = /usr/local/share/fonts/PingFang/ ,
 ]
 
@@ -107,7 +107,7 @@
 {\section}
 [hang]
 {\bfseries\Large\sffamily}
-{\textcolor{fav-alt-purple}{\S \thesection}}
+{\textcolor{fav-purple}{\S \thesection}}
 {0.5em}
 {}
 []
@@ -133,7 +133,7 @@
 \newenvironment{subproof}[1][Proof]{\begin{proof}[#1]\renewcommand{\qedsymbol}{$\blacksquare$}}{\end{proof}}
 \newenvironment{claim}[1][Claim]{\par\medskip\textbf{#1.}\space}{\par}
 
-\ifx\opdraft\true
+\ifx \opdraft \true
 \newcounter{mathcounter}
 \else
 \newcounter{mathcounter}[section]
