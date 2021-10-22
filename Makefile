@@ -18,5 +18,5 @@ doc: asy
 
 archive: doc
 	tar -czvf $(NAME).tar.gz $(ARCHIVE_LIST)
-	mv $(NAME).tar.gz $OUTPUTDIR)
+	mv $(NAME).tar.gz $(OUTPUTDIR)
 	cp main.pdf $(OUTPUTDIR)$(NAME).pdf
