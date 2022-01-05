@@ -139,6 +139,17 @@
 \newenvironment{subproof}[1][Proof]{\begin{proof}[#1]\renewcommand{\qedsymbol}{$\blacksquare$}}{\end{proof}}
 \newenvironment{claim}[1][Claim]{\par\medskip\textbf{#1.}\space}{\par}
 
+\theoremstyle{definition}
+\newtheorem*{rem*}{Remark}
+\newtheorem*{defin*}{Definition}
+\newtheorem*{exmp*}{Example}
+
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cor*}{Corollary}
+
 \ifx \opdraft \true
 \newcounter{mathcounter}
 \else
