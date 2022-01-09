@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# this script help you generate a commutative diagram in svg format
+
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+    exit 1
+fi
+
+# extract the filename
+filename=${1}
+filename=${filename%.*}
+
+cp ~/texmf/bin/tex-cd.tex ./
+cp ${1} ./tmp.tex
+
+xelatex tex-cd.tex >/dev/null
+rm -rf tmp.tex
+pdf2svg tex-cd.pdf "${filename}.svg"
+rm -rf tex-cd*
+
+echo "produce ${filename}.svg successfully!"
