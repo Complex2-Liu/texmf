@@ -131,6 +131,7 @@
 
 % Theorem environment
 \RequirePackage{amsmath, amsthm, amssymb, tikz-cd}
+\RequirePackage{mathrsfs}
 % This package must be loaded AFTER amsmath
 % see https://tex.stackexchange.com/questions/19104/cleveref-with-counters-with-same-name
 \RequirePackage[nameinlink]{cleveref}
@@ -205,11 +206,13 @@
 \newcommand*{\QQ}{\mathbb Q}
 \newcommand*{\RR}{\mathbb R}
 \newcommand*{\ZZ}{\mathbb Z}
+\newcommand*{\HH}{\mathbb H}
 \DeclareMathOperator{\id}{id}
 \newcommand*{\divides}{\mid}
 \newcommand*{\ndivides}{\nmid}
 
 % field, galois theory
+\DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
@@ -226,3 +229,51 @@
 \newcommand*{\km}{\mathfrak{m}}
 \newcommand*{\kq}{\mathfrak{q}}
 \DeclareMathOperator{\Spec}{Spec}
+
+% commutative algebra
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\depth}{depth}
+\DeclareMathOperator{\Ass}{Ass}
+
+% representation
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PGL}{PGL}
+
+% homological algebra
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+
+% lie group and lie algebra
+\newcommand*{\kg}{\mathfrak{g}}
+\newcommand*{\kh}{\mathfrak{h}}
+\newcommand*{\gl}{\mathfrak{gl}}
+
+% script letters etc.
+\newcommand{\SA}{\mathcal A}
+\newcommand{\SB}{\mathcal B}
+\newcommand{\SC}{\mathcal C}
+\newcommand{\SF}{\mathcal F}
+\newcommand{\SG}{\mathcal G}
+\newcommand{\SH}{\mathcal H}
+\newcommand{\SU}{\mathcal U}
+\newcommand{\OO}{\mathcal O}
+
+\newcommand{\SCA}{\mathscr A}
+\newcommand{\SCB}{\mathscr B}
+\newcommand{\SCC}{\mathscr C}
+\newcommand{\SCD}{\mathscr D}
+\newcommand{\SCE}{\mathscr E}
+\newcommand{\SCF}{\mathscr F}
+\newcommand{\SCG}{\mathscr G}
+\newcommand{\SCH}{\mathscr H}
+\newcommand{\SCU}{\mathscr U}
+
+% category theory
+\DeclareMathOperator{\colim}{colim}
